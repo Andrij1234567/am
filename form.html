@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Запис на курс</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+        background-color: rgb(42, 171, 218);
+        background-image: url(board-5599231_1920-removebg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    }
+
+    .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid rgb(37, 105, 190);
+        background-color: #fbfbfb;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        color: #333;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: rgb(37, 105, 190);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #155871;
+    }
+</style>
+</head>
+<body>
+
+<div class="form-container" id="forma">
+    <h2 class="form-title">Наші менеджера звяжуться з вами</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="f680791c-e11f-47c9-ab53-7d551c320cb3">
+        <div class="form-group">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Номер телефону:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Пошта:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="course">Вибір курсу:</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>Оберіть курс</option>
+                <option value="course1">Навчання в групі</option>
+                <option value="course2">Курс англійської мови для бізнесу</option>
+                <option value="course3">Індивідуальне навчання</option>
+                <option value="course3">Підготовка до IELTS</option>
+            </select>
+        </div>
+        <button type="submit">Записатися</button>
+    </form>
+</div>
+
+
+</body>
+</html>
